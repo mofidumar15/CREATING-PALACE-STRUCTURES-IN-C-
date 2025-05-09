@@ -1,0 +1,81 @@
+/*#include <iostream>
+
+using namespace std;
+
+void drawPalace() {
+    cout << "                 _____" << endl;
+    cout << "               /      \\ " << endl;
+    cout << "              /        \\ " << endl;
+    cout << "             /    |\\    \\ " << endl;
+    cout << "            /     | \\    \\ " << endl;
+    cout << "           /      |  \\    \\ " << endl;
+    cout << "          /       |  |    |\\ " << endl;
+    cout << "         /        |  |    | \\ " << endl;
+    cout << "        /         |  |    |  \\ " << endl;
+    cout << "       /          |  |    |  |\\ " << endl;
+    cout << "      /           |  |    |  | \\ " << endl;
+    cout << "     /            |  |    |  |  \\ " << endl;
+    cout << "    /             |  |    |  |   \\ " << endl;
+    cout << "   /______________|__|____|__|____\\ " << endl;
+    cout << "   |             |  |    |  |      | " << endl;
+    cout << "   |             |  |    |  |      | " << endl;
+    cout << "   |             |  |____|__|______| " << endl;
+    cout << "   |             | /             / " << endl;
+    cout << "   |             |/_____________/ " << endl;
+    cout << "   |             /             / " << endl;
+    cout << "   |            /_____________/ " << endl;
+    cout << "   |           /             / " << endl;
+    cout << "   |          /_____________/ " << endl;
+    cout << "   |         /             / " << endl;
+    cout << "   |        /_____________/ " << endl;
+    cout << "   |       /             / " << endl;
+    cout << "   |      /_____________/ " << endl;
+    cout << "   |     /             / " << endl;
+    cout << "   |    /_____________/ " << endl;
+    cout << "   |   /             / " << endl;
+    cout << "   |  /_____________/ " << endl;
+    cout << "   | /             / " << endl;
+    cout << "   |/_____________/ " << endl;
+    cout << endl;
+}
+
+int main() {
+    drawPalace();
+    return 0;
+}*/
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+void drawRectangularName(const string& name) {
+    int nameLength = name.length();
+    int boxWidth = nameLength + 4; // Adjust according to the length of the name
+    
+    // Top border
+    cout << "+";
+    for (int i = 0; i < boxWidth; i++) {
+        cout << "-";
+    }
+    cout << "+" << endl;
+
+    // Middle section with name
+    cout << "|  " << name << "  |" << endl;
+
+    // Bottom border
+    cout << "+";
+    for (int i = 0; i < boxWidth; i++) {
+        cout << "-";
+    }
+    cout << "+" << endl;
+}
+
+int main() {
+    string name;
+    cout << "Enter your name: ";
+    getline(cin, name);
+
+    drawRectangularName(name);
+
+    return 0;
+}
